@@ -1,6 +1,6 @@
 {
-  "version": "1.11.0",
-  "exportedAt": "2025-11-24T00:18:14.549Z",
+  "version": "1.12.0",
+  "exportedAt": "2025-12-07T08:30:46.421Z",
   "config": {
     "language": "en-US",
     "includeAdult": false,
@@ -52,6 +52,7 @@
       "tvdb": "",
       "fanart": "",
       "rpdb": "",
+      "topPoster": "",
       "mdblist": ""
     },
     "ageRating": "None",
@@ -59,18 +60,19 @@
     "sessionId": "",
     "catalogs": [
       {
-        "id": "mdblist.126338",
+        "id": "mdblist.128810",
         "type": "series",
-        "name": "'Tis the Season 🎁",
+        "name": "Seasonal",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
-        "sort": "default",
+        "sort": "random",
         "order": "asc",
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie",
-        "randomizePerPage": true
+        "randomizePerPage": true,
+        "enableRPDB": true
       },
       {
         "id": "mdblist.88434",
@@ -81,7 +83,7 @@
         "source": "mdblist",
         "sort": "default",
         "order": "asc",
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -94,7 +96,7 @@
         "source": "mdblist",
         "sort": "default",
         "order": "asc",
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -106,8 +108,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -119,8 +121,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "releasedigital",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -259,13 +261,13 @@
       {
         "id": "tvdb.collections",
         "name": "TVDB Collections",
-        "type": "series",
+        "type": "movie",
         "source": "tvdb",
         "enabled": true,
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "series"
+        "displayType": "movie"
       },
       {
         "id": "mal.airing",
@@ -286,7 +288,7 @@
         "source": "custom",
         "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%7D/catalog/anime/anilist_trending-now.json",
         "genres": [],
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "manifestData": {
           "id": "anilist_trending-now",
           "type": "anime",
@@ -376,7 +378,7 @@
         "source": "custom",
         "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%7D/catalog/anime/anidb_popular.json",
         "genres": [],
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "manifestData": {
           "id": "anidb_popular",
           "type": "anime",
@@ -466,7 +468,7 @@
         "source": "custom",
         "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%7D/catalog/anime/anidb_latest-started.json",
         "genres": [],
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "manifestData": {
           "id": "anidb_latest-started",
           "type": "anime",
@@ -556,7 +558,7 @@
         "source": "custom",
         "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%7D/catalog/anime/anidb_latest-ended.json",
         "genres": [],
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "manifestData": {
           "id": "anidb_latest-ended",
           "type": "anime",
@@ -1418,7 +1420,7 @@
         "source": "mdblist",
         "sort": "default",
         "order": "asc",
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1431,7 +1433,7 @@
         "source": "mdblist",
         "sort": "default",
         "order": "asc",
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1443,8 +1445,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1456,8 +1458,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1469,8 +1471,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1482,8 +1484,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1495,8 +1497,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1507,9 +1509,9 @@
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
-        "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "sort": "released",
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1521,8 +1523,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1534,8 +1536,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1547,8 +1549,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1560,8 +1562,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1573,8 +1575,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1586,8 +1588,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1599,8 +1601,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1613,7 +1615,7 @@
         "source": "mdblist",
         "sort": "released",
         "order": "asc",
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1625,8 +1627,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1639,7 +1641,7 @@
         "source": "mdblist",
         "sort": "released",
         "order": "asc",
-        "cacheTTL": 40000,
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1651,8 +1653,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1664,8 +1666,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1677,8 +1679,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1690,8 +1692,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1703,8 +1705,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1716,8 +1718,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1729,8 +1731,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1742,8 +1744,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1755,8 +1757,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1768,8 +1770,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1781,8 +1783,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1794,8 +1796,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1807,8 +1809,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1820,8 +1822,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1833,8 +1835,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1846,8 +1848,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series"
       },
@@ -1859,8 +1861,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "released",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1872,8 +1874,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie",
         "randomizePerPage": true
@@ -1886,8 +1888,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series",
         "randomizePerPage": true
@@ -1900,8 +1902,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series",
         "randomizePerPage": true
@@ -1914,8 +1916,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "series",
         "randomizePerPage": true
@@ -1928,8 +1930,8 @@
         "showInHome": true,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie",
         "randomizePerPage": true
@@ -1942,8 +1944,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1955,8 +1957,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1968,8 +1970,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1981,8 +1983,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -1994,8 +1996,8 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       },
@@ -2007,15 +2009,15 @@
         "showInHome": false,
         "source": "mdblist",
         "sort": "random",
-        "order": "desc",
-        "cacheTTL": 40000,
+        "order": "asc",
+        "cacheTTL": 43200,
         "genreSelection": "standard",
         "displayType": "movie"
       }
     ],
     "search": {
       "enabled": true,
-      "ai_enabled": false,
+      "ai_enabled": true,
       "providers": {
         "movie": "tmdb.search",
         "series": "tvdb.search",
@@ -2032,8 +2034,8 @@
       }
     },
     "streaming": [],
-    "lastModified": 1763936962087,
-    "configVersion": 1763936962088,
+    "lastModified": 1763943670596,
+    "configVersion": 1763943670597,
     "displayTypeOverrides": {
       "movie": "movie",
       "series": "series"
