@@ -12,40 +12,57 @@ Lastly, please do note my AIOStreams template *does not* include any catalogs. T
 
 
   <details>
-        <summary>PS. I just switched to TorBox on the Bf deal so now I can finally share my referral code like everyone else woo!!</summary></summary>
+        <summary>PS. I just switched to TorBox on their BF deal, so now I can share my code like everyone else woo!!</summary></summary>
   
     f1cdd3f8-aeee-48f1-849b-64fc7e5aeb3c
-  > Enter that into your sub page, or use [this link](https://torbox.app/subscription?referral=f1cdd3f8-aeee-48f1-849b-64fc7e5aeb3c). You & I get +84 days on a yearly sub if it's your TorBox account's first ever purchase.
+  > Use my [referral](https://torbox.app/subscription?referral=f1cdd3f8-aeee-48f1-849b-64fc7e5aeb3c) and we both get +84 days on a yearly sub, if it's your first ever purchase.
     
   </details>
 
 ---
-## ✨ Changes to template from v1.1 to v1.2
-
-Formatter
-- Totally revamped with new icons, new detections, new switching logic, and much more.
+## ✨ Release Notes
+<details>
+<summary>Changes in v1.2</summary>
+<p></p>
+<details>
+<summary>Formatter</summary> 
+<p></p>
+  
+  - Totally revamped with new icons, new detections, new switching logic, and much more.
   - The title icon will switch from ▤ to ☁︎ to indicate library item
   - ⚡/⏳for cached/uncached
   - ⛊/⛉ for proxied/unproxied
   - ⧉/◧ for season pack/single episode
 - Cleaned up formatting for "External Download" streams
 - Finial last line that displays extra metadata when found ✎..(regex matched, stream message, edition, network, upscaled, repack, uncensored, and unrated)
+</details>
 
-Addons
+<details>
+<summary>Addons</summary>
+<p></p>
+  
 - Removed SubHero as I heard reports that SubHero wasn't working at the moment. I suggest installing subtitle addons directly into your stremio.
 - Removed Sootio and Zilean from the Debrid template.
 - Switched the StremThru Torz to the Torznab addon to use its API endpoint instead.
   - This is similar to Torz, but it takes advantage of Viren's anime database for title matching for anime.
 - Comet, MediaFusion, and StremThru will continue to use @midnightignite 's URLs. Thank her for all your weeb content.
 - No catalogs addon is included. This is intentional as I use AIOMetadata for that. Check my guide for configuration and step-by-step setup.
+</details>
 
-Miscellanous
+<details>
+<summary>Miscellanous</summary>
+ <p></p> 
+  
 - "Always Pre-cache" is now turned off.
 - Trimmed down "Auto Play Attributes" to `resolution, quality, language` per @t… suggestion; this should reduce autoplay failures.
 - "Cached to play" is turned on for usenet.
 - "Hide Error" is now enabled to hide all errors.
+</details>
 
-Filters
+<details>
+<summary>Filters</summary>
+<p></p>
+  
 - "Matching Filter" now includes `Anime` in the Title Matching; Similarity Threshold remains at 0.95. "Season/Episode Matching" now has Strict toggled on.
 - "Digital Release Filter" is now disabled. It's redundant as SEL determines when CAM streams are shown only when better qualities are not found.
 - "Language Filter" is now simplified; everything was moved to "Preferred Languages" per feedback. If you want stricter language control, as in the previous template, you may still use the Excluded/Required fields. Adjust your language setting as usual.
@@ -55,8 +72,12 @@ Filters
   - Reliable Cached (debrid & cached usenet from torbox/easynews service) -> cached usenet from nzbdav/altmount service & http & p2p -> uncached usenet -> uncached debrid
 - This order may change as usenet reliability from various sources improves.
 - Excluded Stream Expressions (ESEs). This is the big one that you're here for. It's the core engine for filtering in this setup. With your feedback, I rewrote the whole ESEs, expanding upon the previous setup, for a new and improved filtering logic.
+</details>
 
-Here are the differences in this version of SEL:
+<details>
+<summary>Changes to SEL:</summary>
+<p></p>
+  
 - We went from 3 blocks of ESE to 8, divided for clarity so you can easily see what is being filtered Misc -> Enable Statistics.
 - #1-2: Seeders Filter (Uncached & P2P)
   - The Seeders filter is the same as before; it will remove low seeder count streams from uncached debrid and P2P (if present). Exceptions are usenet and good regex matched results.
@@ -70,26 +91,41 @@ Here are the differences in this version of SEL:
   - The old filter used a simpler `slice(streams, 3)` which meant it almost always kept cached streams as the top 3. While most didn't care about uncached debrid being filtered, those with uncached usenet suffered. They didn't see any uncached usenet in the final result.
 - #8: Final Filter (Low Quality & Resolution)
   - This last block is where the final decision is made on how many and what kind of results to show. I spent a lot of time tweaking these numbers here to get the result page just how I like, on as many shows and movies as I could test, with multiple different sets of debrid/usenet services/addons. Huge thanks to @bourboncrow, for whom this wouldn't have been possible.
+</details>
 
-Sort Order:
+<details>
+<summary>Sort Order:</summary>
+<p></p>
+  
 - The Sort Order is also revamped to address the new influx of usenet content and some feedback about the old sort order.
 - Before you ask: why is nothing on the Global Sort Order page? Well, you must be new here, since I do all my sorting inside "Cached & Uncached Sort Order".
 - To address confusion about where to adjust sort order, I initially spent time trying a Global Sort Order setup. Long story short, I had to return to the old "Cached/Uncached Sort order" to achieve the exact order I envision.
 - `Stream Expressions Matched` is now a new sort item, replacing `Stream Type` from the previous setup. As explained earlier, this uses the ranking from `Preferred Stream Expressions` which allows for a more complex and nuanced ranking of streams.
 - A lot of feedback asked how to show more streams from their language, so I have made the default sort order as language-centric as I can without sacrificing good results priority (i.e., I moved `Language` up to right below `Regex Patterns`; you can certainly move it higher if you wish).
 - If SEL is the main engine for filtering, the sort order is the backbone. Adjusting the sort order will affect which top results are kept and which results are removed. If you're not quite happy with what results SEL is keeping, then feel free to adjust the Sort Order to reflect your preference.
+</details>
 
-Major improvement as a consequence of new SEL + Sort order:
+<details>
+<summary>Major improvement as a consequence of new SEL + Sort order:</summary>
+<p></p>
+  
 - Library streams are now exempt from all filtering. Previously, if you had three 4K Blu-ray remuxes in your library, the SEL would have selected those three and looked no further for that 4K Blu-ray remux category. The new update means the SEL will look for another three more 4K Blu-ray remux streams.
 - For those that have nzbdav/altmount addons that return hundreds of cached usenet, the old SEL + sort order meant their result page was filled with cached usenet from nzbdav (since cached usenet > cached debrid). This is solved with the stream expressions patterns replacing stream type order. Reliable cached results will be favoured accordingly, then uncached usenet, and then lastly uncached debrid.
 - For those with uncached usenet, I know you wanted to see more results from your indexers. This new SEL will filter and treat these results separately (via the uncached filter from block #7 so you will see another list of uncached usenet after your usual cached results. What quality or resolution are shown will depend on how many cached results are present.
 - For those that saw uncached debrid showing up unnecessarily, I heard you. Low quality cached streams won't be removed in favour of high quality uncached debrid anymore. Any uncached debrid, high or low quality, will only be shown as the last resort when too few results are found.
 - For those that asked for more lower-end results, I have relaxed the filtering in block #8 a tiny bit so you're more likely to see a few 720p results sprinkled here and there. Don't worry, this only happens when your list isn't filled out by high quality 4K/1080p.
-- Last but not least, for making it this far, I made a bonus SEL version called "Extended SEL".
+</details>
+
+<details>
+<summary>Extended SEL</summary>
+<p></p>
+  
+  - Last but not least, for making it this far, I made a bonus SEL version called "Extended SEL".
   - A semi-popular request was to relax the filtering from 3 to 5, and I did just that for this version of SEL. Not only that, but I also adjusted various filtering conditions to reflect the higher amount, tweaking the Final Filter specifically to still honour the spirit of the Standard SEL. Poor quality results will only be shown when necessary.
   - In the end, this Extended SEL will keep around 20-30 streams (not including uncached usenet), compared to the Standard SEL which keeps around 15-20. This version may be ideal for those that want a guaranteed 720p result for their mobile needs, while fleshing out the rest of the higher resolution and quality with more streams (from 3 per in Standard to 5 per in Extended).
   - This Extended SEL will only be available as a separate "Extended SEL Only Template" for import, so you must import the main template first with the Standard SEL. Test that out; I'm sure you will be more than happy already with that. Otherwise, open up the template browser again and load the "Extended SEL Only" template to switch between the Standard & Extended SEL versions (nothing else will be overridden, as usual).
-
+</details>
+</details>
 
 ## ⚙️ Templates Included for AIOStreams
 
