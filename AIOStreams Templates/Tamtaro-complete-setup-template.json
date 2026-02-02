@@ -5,7 +5,7 @@
     "description": "Fully configured setup based on Tamtaro's recommended filters, sort orders, and Standard SEL described on the [github](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting). Designed for those with debrid or usenet services, while seeking the highest quality results, minimal clutter, and complete coverage even when options are few. \n\n * Comes with addons and formatter. Use my other templates to keep your existing addons/formatter. \n * Standard SEL keeps around 15-20 results. Import Extended SEL Only template afterwards to keep more. Github has more SEL options to try out. \n * **ⓘ For catalogs, check out Github for AIOMetadata configs.**\n * Review the Language filter. Add your main languages to Preferred Languages, keep rest the same. \n * Some addons are included but disabled; just turn them on if you use them (eg. Torbox & Debridio). \n * This setup uses [Vidhin's regex](https://github.com/Vidhin05/Releases-Regex) to rank streams from reputable release groups. Big thx! ☺️",
     "source": "external",
     "author": "Tamtaro",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "category": "Debrid",
     "serviceRequired": false
   },
@@ -53,21 +53,6 @@
           "mediaTypes": [
             "anime"
           ]
-        }
-      },
-      {
-        "type": "debridio",
-        "instanceId": "26b",
-        "enabled": false,
-        "options": {
-          "name": "Debridio",
-          "timeout": 7000,
-          "resources": [
-            "stream"
-          ],
-          "url": "",
-          "mediaTypes": [],
-          "debridioApiKey": "<optional_template_placeholder>"
         }
       },
       {
@@ -157,26 +142,6 @@
           ],
           "providers": [],
           "useMultipleInstances": false
-        }
-      },
-      {
-        "type": "newznab",
-        "instanceId": "a25",
-        "enabled": false,
-        "options": {
-          "name": "Searchⁿᶻᵇ",
-          "newznabUrl": "https://search-api.torbox.app/newznab",
-          "apiPath": "/api",
-          "timeout": 7000,
-          "mediaTypes": [],
-          "services": [
-            "torbox"
-          ],
-          "searchMode": "both",
-          "paginate": false,
-          "checkOwned": true,
-          "useMultipleInstances": false,
-          "apiKey": "<optional_template_placeholder>"
         }
       }
     ],
@@ -601,6 +566,10 @@
       {
         "name": "Anime Web T6",
         "pattern": "/(\\[(Chihiro|Doki|Kantai|Tsundere)\\]|-(Chihiro|Doki|Kantai|Tsundere(?!-))\\b|\\b(9volt|Asenshi|Commie|DameDesuYo|GJM|Kaleido|KawaSubs)\\b)/i"
+      },
+      {
+        "name": "Bad",
+        "pattern": "/\\b(beAst|COLLECTiVE|EPiC|iVy|KiNGDOM|LUCY|Scene|SUNSCREEN)\\b/"
       },
       {
         "name": "Bad",
