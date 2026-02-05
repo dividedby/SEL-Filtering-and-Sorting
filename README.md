@@ -21,6 +21,13 @@ Lastly, please do note my AIOStreams template *does not* include any catalogs. T
 
 ---
 ## ✨ Release Notes
+February 4, 2026: What's new in template v1.4.3!
+- G's Low Bitrate ESE now fixed to only trigger if triggering it results in greater than 10 total remaining cached.
+- STorz now switched back to using Torznab endpoint.`"torznabUrl": "https://stremthru.13377001.xyz/v0/torznab",`
+  - this solves the false parsing of iTunes as Italian language resulting in false sorting
+- ongoingSeasonPacks ESE now fixed to work in more niche cases
+- removed pre-DigitalRelease ESE until further notice. Previously it was using daysSinceRelease which is using theatrical release datae not digital release date.
+- Fixed some syntax issues causing digitalRelease ISE to not work properly (it supposes to passthrough low res quality releases like cams for movies not yet released in digital, and removing fake web-dls and remuxes)
 
 February 2, 2026: What's new in template v1.4.0!
 - Addons adjusted slightly: Default urls, SeaDex addon prioritized, optional Torbox.
